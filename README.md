@@ -1186,17 +1186,20 @@ uv run mcp server/sse/stocks_server.py
 And then the A2A Servers:
 
 ```bash
-uv run a2a_servers/agent_servers/stock_report_agent_server.py
+uv run -m a2a_servers.agent_servers.stock_report_agent_server
 ```
 
 ```bash
-uv run a2a_servers/agent_servers/google_search_agent_server.py
-```
+uv run -m a2a_servers.agent_servers.gsearch_report_agent_server
 
 And finally, the Host Agent:
 
 ```bash
-uv run a2a_servers/host_agent_server.py
+uv run -m a2a_servers.agent_servers.host_agent_server
 ```
 
 We can then contact the host agent (e.g, using the script at `a2a_servers/run_from_local_client.py`).
+
+
+uv run -m mcp_server.sse.search_server
+uv run -m mcp_server.sse.stocks_server

@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+
 from mcp.server.fastmcp import FastMCP
 
 from services.stocks_service.finhub_service import FinHubService

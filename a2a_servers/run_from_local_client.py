@@ -1,12 +1,16 @@
 # echo_client.py
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import asyncio
 import logging
 import traceback
 from uuid import uuid4
 
 # Assuming common types and client are importable
-from common.client import A2AClient, card_resolver # card_resolver might be needed
-from common.types import Message, TextPart, AgentCard # Import AgentCard if needed directly
+from a2a_servers.common.client import A2AClient, card_resolver # card_resolver might be needed
+from a2a_servers.common.types import Message, TextPart, AgentCard # Import AgentCard if needed directly
 
 # Configure basic logging
 logging.basicConfig(level=logging.INFO)
